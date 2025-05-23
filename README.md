@@ -37,4 +37,10 @@ We use the following datasets:
 - [Company descriptions](https://huggingface.co/datasets/Mateusz1017/annual_reports_tokenized_llama3_logged_returns_no_null_returns_and_incomplete_descriptions_24k)
 - [SAE features of each descriptions](https://huggingface.co/datasets/marco-molinari/company_reports_with_features)
 
-The features were obtained by passing all tokenized company description trough the encoder of: https://huggingface.co/EleutherAI/sae-llama-3-8b-32x at layer 30, in particular, this can be loaded as: ``` sae = Sae.load_from_hub("EleutherAI/sae-llama-3-8b-32x", hookpoint="layers.30", decoder=False) ```
+The features were obtained by passing all tokenized company description trough the encoder of: https://huggingface.co/EleutherAI/sae-llama-3-8b-32x at layer 30, in particular, this is a simple example using https://github.com/EleutherAI/sae:
+```
+sae = Sae.load_from_hub("EleutherAI/sae-llama-3-8b-32x", hookpoint="layers.30", decoder=False) 
+model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B")
+outputs = model(input, output_hidden_states=True)
+features = sae.encoder(outputs)
+``` 
