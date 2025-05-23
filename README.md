@@ -26,3 +26,9 @@ Use the ``` reproduce_*.sh ``` scripts to obtain data/images for table 2 and fig
 ``` fuz_scores ``` was pupulated using https://github.com/EleutherAI/delphi.    
 To construct the clusters refer to the ``` Clustering ``` folder.   
 PCA is calculated on all the features (not just the 1000 we have interpretations for). The PCA we use is available at: https://drive.google.com/file/d/1p9OgcPF1ZVtmLBNRYsMEirBiNVp3xcfO/view?usp=drive_link.
+
+## Data
+
+We use the following datasets:
+- [Company descriptions](https://huggingface.co/datasets/Mateusz1017/annual_reports_tokenized_llama3_logged_returns_no_null_returns_and_incomplete_descriptions_24k)
+- [SAE features of each descriptions](https://huggingface.co/datasets/marco-molinari/company_reports_with_features)
