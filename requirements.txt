@@ -1,0 +1,18 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.32.0
+datasets>=2.14.0
+pandas>=2.0.0
+tqdm>=4.66.0
+orjson>=3.9.0
+tabulate>=0.9.0s
+matplotlib>=3.7.0
+scipy>=1.11.0
+huggingface_hub>=0.16.0
+httpx
+pydantic
+tiktoken
+torchmetrics
+# EleutherAI packages - install directly from GitHub
+git+https://github.com/EleutherAI/delphi.git
+git+https://github.com/EleutherAI/sparsify.git@main
