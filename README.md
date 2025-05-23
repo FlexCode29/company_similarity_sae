@@ -28,7 +28,7 @@ Use the ``` reproduce_*.sh ``` scripts to obtain data/images for table 2 and fig
 ## Obtaining the inputs.
 
 ``` fuz_scores ``` was pupulated using https://github.com/EleutherAI/delphi.    
-To construct the clusters refer to the ``` Clustering ``` folder.   
+To construct the clusters, and reproduce Table 1 and Figure 2, please refer to the ``` Clustering ``` folder.   
 PCA is calculated on all the features (not just the 1000 we have interpretations for). The PCA we use is available at: https://drive.google.com/file/d/1p9OgcPF1ZVtmLBNRYsMEirBiNVp3xcfO/view?usp=drive_link.
 
 ## Data
