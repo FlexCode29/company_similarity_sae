@@ -1,12 +1,28 @@
+# Interpretable Company Similarity with Sparse Autoencoders
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2412.02605"><img src="https://img.shields.io/badge/arXiv-2309.12075-red.svg?style=for-the-badge"></a>
+</p>
+
+This repository contains the code accompanying the paper [Interpretable Company Similarity with Sparse Autoencoders](https://arxiv.org/abs/2412.02605).
+
+## Installing
+
 Please make sure to install all packages in requirements.txt
+```
+pip install -r requirements.txt
+```
 
-## Reproducing Interpretability
-
-Use the reproduce_*.sh scripts to obtain data/images for table 2 and figure 3, 4, and 7. In particular reproduce rolling uses the rolling cutoff to construct the clusters, while base optimises correlations across 2 time frames.
+Running ``` cluster_feature_gpu.py ``` achieves significant speedups compared to running the same computation on CPU (either of the sh scripts should take around a minute to run on a cluster of 8 AMD Mi250x, which were kindly provided by [Nscale](https://www.nscale.com/) for this paper). Therefore, the code is written for a multi-GPU node (you should either use a cluster of GPUs, or modify the file to run on CPU, and the scripts to not use torchrun).
 
 
-### Reproducing the inputs
+## Running Interpretability
 
-fuz_scores was pupulated using https://github.com/EleutherAI/delphi
-Clusters were constructed using <VICTOR'S CODE>.
-PCA was obtained with <VICTOR'S CODE>, using all sparse features.
+Use the ``` reproduce_*.sh ``` scripts to obtain data/images for table 2 and figure 3, 4, and 7. In particular ``` reproduce_rolling.sh ``` uses the rolling cutoff to construct the clusters, while ``` reproduce_base.sh ``` does not.
+
+
+## Obtaining the inputs.
+
+``` fuz_scores ``` was pupulated using https://github.com/EleutherAI/delphi.    
+To construct the clusters refer to the ``` Clustering ``` folder.   
+PCA is calculated on all the features (not just the 1000 we have interpretations for). The PCA we use is available at: https://drive.google.com/file/d/1p9OgcPF1ZVtmLBNRYsMEirBiNVp3xcfO/view?usp=drive_link.
