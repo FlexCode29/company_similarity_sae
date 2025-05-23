@@ -15,6 +15,10 @@ pip install -r requirements.txt
 
 Running ``` cluster_feature_gpu.py ``` achieves significant speedups compared to running the same computation on CPU (either of the sh scripts should take around a minute to run on a cluster of 8 AMD Mi250x, which were kindly provided by [Nscale](https://www.nscale.com/) for this paper). Therefore, the code is written for a multi-GPU node (you should either use a cluster of GPUs, or modify the file to run on CPU, and the scripts to not use torchrun).
 
+## Features distribution
+
+You can reproduce Figure 1 as follows:
+``` distribution_summed_sae_features.py ```
 
 ## Running Interpretability
 
