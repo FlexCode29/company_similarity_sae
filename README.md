@@ -28,8 +28,19 @@ Use the ``` reproduce_*.sh ``` scripts to obtain data/images for table 2 and fig
 ## Obtaining the inputs.
 
 ``` fuz_scores ``` was pupulated using https://github.com/EleutherAI/delphi.    
-To construct the clusters, and reproduce Table 1 and Figure 2, please refer to the ``` Clustering ``` folder.   
+To construct the clusters, please refer to the ``` Clustering ``` section.   
 PCA is calculated on all the features (not just the 1000 we have interpretations for). The PCA we use is available at: https://drive.google.com/file/d/1p9OgcPF1ZVtmLBNRYsMEirBiNVp3xcfO/view?usp=drive_link.
+
+## Clustering
+
+To use files in the Clustering folder please install ``` Clustering/requirements.txt ```.
+Before running:
+Unzip `cik_ticker_timeseries.pkl.zip` and place the `cik_ticker_timeseries.pkl` file inside `Clustering/data/cointegration/`, otherwise `Clustering/Cointegration_Pairs_Trading.py` will not run.
+
+Tables and Figures Reproducibility:
+1. Figure 2 refers to `Clustering/images/CD_PALM_final_plot_resized.png`, and can be reproduced by running `Clustering/GCD_Clustering_SAEs.py`
+2. Data From Table 1 can be reproduced by running `Clustering/GCD_Clustering_SAEs.py`, `Clustering/GCDR_Clustering_SAEs.py` and `Clustering/Cointegration_Pairs_Trading.py`.
+3. Figure 5 refers to `Clustering/images/optuna_study.png`, and can be reproduced by running `Clustering/G_CD_Optuna_SAEs.py`.
 
 ## Data
 
