@@ -18,7 +18,8 @@ Running ``` cluster_feature_gpu.py ``` achieves significant speedups compared to
 ## Features distribution
 
 You can reproduce Figure 1 as follows (keep in mind this can take some time):
-``` distribution_summed_sae_features.py ```
+
+```python distribution_summed_sae_features.py ```
 
 ## Running Interpretability
 
