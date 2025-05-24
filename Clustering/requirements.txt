@@ -15,5 +15,3 @@ seaborn
 networkx
 yfinance
 statsmodels
-os
-json
